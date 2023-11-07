@@ -1,0 +1,43 @@
+﻿@model IEnumerable<GestionEmploi.Models.emploie>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="text-center mb-3">
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+</div>
+
+<table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Jours)</th>
+            <th>@Html.DisplayNameFor(model => model.heure_debut)</th>
+            <th>@Html.DisplayNameFor(model => model.heure_fin)</th>
+            <th>@Html.DisplayNameFor(model => model.Formateur.NomFormateur)</th>
+            <th>@Html.DisplayNameFor(model => model.Groupe.NomGroupe)</th>
+            <th>@Html.DisplayNameFor(model => model.Module.NomModule)</th>
+            <th class="text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Jours)</td>
+                <td>@Html.DisplayFor(modelItem => item.heure_debut)</td>
+                <td>@Html.DisplayFor(modelItem => item.heure_fin)</td>
+                <td>@Html.DisplayFor(modelItem => item.Formateur.NomFormateur)</td>
+                <td>@Html.DisplayFor(modelItem => item.Groupe.NomGroupe)</td>
+                <td>@Html.DisplayFor(modelItem => item.Module.NomModule)</td>
+                <td class="text-center">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.idEmploie }, new { @class = "btn btn-info btn-sm" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.idEmploie }, new { @class = "btn btn-success btn-sm" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.idEmploie }, new { @class = "btn btn-danger btn-sm" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

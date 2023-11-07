@@ -1,0 +1,50 @@
+﻿@model GestionEmploi.Models.Module
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Module</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomModule)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomModule)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DureeModule)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DureeModule)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Formateur.NomFormateur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Formateur.NomFormateur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Salle.NomSalle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Salle.NomSalle)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idModule }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

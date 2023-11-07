@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2b301cd2e3464c52936a07453cc30658" Name="Diagram1" >
+        <EntityTypeShape EntityType="Model1.Formateur" Width="1.5" PointX="4.75" PointY="0.5" />
+        <EntityTypeShape EntityType="Model1.Groupe" Width="1.5" PointX="2" PointY="2.75" />
+        <EntityTypeShape EntityType="Model1.Filiere" Width="1.5" PointX="3" PointY="6.125" />
+        <EntityTypeShape EntityType="Model1.emploie" Width="1.5" PointX="5.875" PointY="4.625" />
+        <EntityTypeShape EntityType="Model1.Module" Width="1.5" PointX="8.875" PointY="2.5" />
+        <EntityTypeShape EntityType="Model1.Salle" Width="1.5" PointX="11.25" PointY="1.625" />
+        <AssociationConnector Association="Model1.Enseigner" />
+        <AssociationConnector Association="Model1.Etudier" />
+        <AssociationConnector Association="Model1.Lier" />
+        <AssociationConnector Association="Model1.Appartient" />
+        <AssociationConnector Association="Model1.Avoir" />
+        <AssociationConnector Association="Model1.Integrer" />
+        <AssociationConnector Association="Model1.Associer" />
+        <AssociationConnector Association="Model1.Attacher" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

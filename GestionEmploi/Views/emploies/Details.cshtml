@@ -1,0 +1,38 @@
+﻿@model GestionEmploi.Models.emploie
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<div class="details-container">
+    <h4 class="details-title">emploie</h4>
+    <hr class="details-divider" />
+    <dl class="dl-horizontal">
+        <dt class="details-term">@Html.DisplayNameFor(model => model.Jours)</dt>
+        <dd class="details-description">@Html.DisplayFor(model => model.Jours)</dd>
+
+        <dt class="details-term">@Html.DisplayNameFor(model => model.heure_debut)</dt>
+        <dd class="details-description">@Html.DisplayFor(model => model.heure_debut)</dd>
+
+        <dt class="details-term">@Html.DisplayNameFor(model => model.heure_fin)</dt>
+        <dd class="details-description">@Html.DisplayFor(model => model.heure_fin)</dd>
+
+        <dt class="details-term">@Html.DisplayNameFor(model => model.Formateur.NomFormateur)</dt>
+        <dd class="details-description">@Html.DisplayFor(model => model.Formateur.NomFormateur)</dd>
+
+        <dt class="details-term">@Html.DisplayNameFor(model => model.Groupe.NomGroupe)</dt>
+        <dd class="details-description">@Html.DisplayFor(model => model.Groupe.NomGroupe)</dd>
+
+        <dt class="details-term">@Html.DisplayNameFor(model => model.Module.NomModule)</dt>
+        <dd class="details-description">@Html.DisplayFor(model => model.Module.NomModule)</dd>
+    </dl>
+</div>
+
+
+<div class="details-buttons">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idEmploie }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-secondary" })
+</div>
+

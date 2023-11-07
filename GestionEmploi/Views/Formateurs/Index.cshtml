@@ -1,0 +1,46 @@
+﻿@model IEnumerable<GestionEmploi.Models.Formateur>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Index</h2>
+        <p class="text-center">
+            @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+        </p>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.NomFormateur)</th>
+                    <th>@Html.DisplayNameFor(model => model.Groupe.NomGroupe)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.NomFormateur)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Groupe.NomGroupe)</td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.IdFormateur }, new { @class = "btn btn-info btn-sm" }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.IdFormateur }, new { @class = "btn btn-success btn-sm" }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.IdFormateur }, new { @class = "btn btn-danger btn-sm" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
